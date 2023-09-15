@@ -8,6 +8,7 @@ import LoginScreen from "../screens/LoginScreen";
 import SignUpScreen from "../screens/SignUpScreen";
 import useAuth from "../hooks/useAuth";
 import AddTender from "../screens/AddTender";
+import TenderDetails from "../screens/TenderDetails";
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +28,14 @@ export default function AppNavigation() {
             name="AddTender"
             options={{ headerTitle: "Add Tender" }}
             component={AddTender}
+          />
+          <Stack.Screen
+            name="Tender Details"
+            options={{
+              headerTitle: "Tender Details",
+              headerTitleAlign: "center",
+            }}
+            component={TenderDetails}
           />
         </Stack.Navigator>
       </NavigationContainer>

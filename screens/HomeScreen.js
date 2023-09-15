@@ -38,7 +38,7 @@ export default function HomeScreen() {
         style={{ backgroundColor: "#E3E7F4" }}
       >
         <TouchableOpacity
-          className={`py-4 px-12 rounded-xl ${
+          className={`py-4 px-14 rounded-xl ${
             selectedButton === "Pending" ? "bg-white" : ""
           }`}
           onPress={() => handleButtonPress("Pending")}
@@ -53,7 +53,7 @@ export default function HomeScreen() {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          className={`py-4 px-12 rounded-xl ${
+          className={`py-4 px-14 rounded-xl ${
             selectedButton === "Completed" ? "bg-white" : ""
           }`}
           onPress={() => handleButtonPress("Completed")}
@@ -72,19 +72,24 @@ export default function HomeScreen() {
       <View className="mt-4">
         <Text className="text-lg font-bold">All Tenders</Text>
         <TouchableOpacity
-          className="py-2 px-2 rounded-xl mt-2 flex flex-row justify-between items-center shadow-sm"
+          className="py-4 px-4 rounded-xl mt-2 flex flex-row justify-between items-center shadow-sm"
           style={{ backgroundColor: "#E3E7F4" }}
+          onPress={() => {
+            navigation.navigate("Tender Details", {
+              itemId: 1,
+            });
+          }}
         >
-          <View className="flex flex-row gap-4">
+          <View className="flex flex-row gap-4 items-center">
             <View
               className="p-2 rounded-full"
               style={{ backgroundColor: "#E7FFDE" }}
             >
               <Icon name="euro" color="#2DB517" />
             </View>
-            <View className="flex flex-col justify-between">
-              <Text className="text-md font-bold">Kaumba Borehole</Text>
-              <Text className="font-extralight text-gray-500">
+            <View className="flex flex-col">
+              <Text className="text-lg font-bold">Kaumba Borehole</Text>
+              <Text className="font-regular text-md text-gray-500">
                 KShs. 4,899,600
               </Text>
             </View>
@@ -96,10 +101,10 @@ export default function HomeScreen() {
         </TouchableOpacity>
 
         <TouchableOpacity
-          className="py-2 px-2 rounded-xl mt-2 flex flex-row justify-between items-center shadow-sm"
+          className="py-4 px-4 rounded-xl mt-2 flex flex-row justify-between items-center shadow-sm"
           style={{ backgroundColor: "#E3E7F4" }}
         >
-          <View className="flex flex-row gap-4">
+          <View className="flex flex-row gap-4 items-center">
             <View
               className="p-2 rounded-full"
               style={{ backgroundColor: "#FFE3E3" }}
@@ -107,8 +112,8 @@ export default function HomeScreen() {
               <Icon name="check" color="#FF2525" />
             </View>
             <View className="flex flex-col justify-between">
-              <Text className="text-md font-bold">Mavindini Lab</Text>
-              <Text className="font-extralight text-gray-500">
+              <Text className="text-lg font-bold">Mavindini Lab</Text>
+              <Text className="font-regular text-gray-500">
                 KShs. 1,864,699
               </Text>
             </View>
@@ -120,10 +125,10 @@ export default function HomeScreen() {
         </TouchableOpacity>
 
         <TouchableOpacity
-          className="py-2 px-2 rounded-xl mt-2 flex flex-row justify-between items-center shadow-sm"
+          className="py-4 px-4 rounded-xl mt-2 flex flex-row justify-between items-center shadow-sm"
           style={{ backgroundColor: "#E3E7F4" }}
         >
-          <View className="flex flex-row gap-4">
+          <View className="flex flex-row gap-4 items-center">
             <View
               className="p-2 rounded-full"
               style={{ backgroundColor: "#CDD9F6" }}
@@ -131,8 +136,8 @@ export default function HomeScreen() {
               <Icon name="lightbulb" color="#054BB4" />
             </View>
             <View className="flex flex-col justify-between">
-              <Text className="text-md font-bold">Katulani Road</Text>
-              <Text className="font-extralight text-gray-500">
+              <Text className="text-lg font-bold">Katulani Road</Text>
+              <Text className="font-regular text-gray-500">
                 KShs. 2,599,600
               </Text>
             </View>
