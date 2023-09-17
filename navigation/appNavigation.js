@@ -10,6 +10,7 @@ import useAuth from "../hooks/useAuth";
 import AddTender from "../screens/AddTender";
 import TenderDetails from "../screens/TenderDetails";
 import Expenditure from "../screens/Expenditure";
+import AddExpenditure from "../screens/AddExpenditure";
 
 const Stack = createNativeStackNavigator();
 
@@ -35,6 +36,7 @@ export default function AppNavigation() {
             options={{
               headerTitle: "Tender Details",
               headerTitleAlign: "center",
+              headerShadowVisible: false,
             }}
             component={TenderDetails}
           />
@@ -43,8 +45,17 @@ export default function AppNavigation() {
             options={{
               headerTitle: "Expenditure Details",
               headerTitleAlign: "center",
+              headerShadowVisible: false,
             }}
             component={Expenditure}
+          />
+          <Stack.Screen
+            name="Add Expenditure"
+            options={{
+              headerTitle: "Add Expenditure",
+              headerTitleAlign: "center",
+            }}
+            component={AddExpenditure}
           />
         </Stack.Navigator>
       </NavigationContainer>

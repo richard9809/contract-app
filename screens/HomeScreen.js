@@ -34,17 +34,17 @@ export default function HomeScreen() {
       </View>
 
       <View
-        className="mt-4 py-2  rounded-xl flex flex-row justify-center shadow-sm"
+        className="mt-6 py-2 px-2 rounded-xl flex flex-row space-between shadow-sm"
         style={{ backgroundColor: "#E3E7F4" }}
       >
         <TouchableOpacity
-          className={`py-4 px-14 rounded-xl ${
+          className={`flex-1 items-center py-4 rounded-xl ${
             selectedButton === "Pending" ? "bg-white" : ""
           }`}
           onPress={() => handleButtonPress("Pending")}
         >
           <Text
-            className={`text-md ${
+            className={`text-lg ${
               selectedButton === "Pending" ? "font-bold" : ""
             }`}
             style={{ color: "#054BB4" }}
@@ -53,13 +53,13 @@ export default function HomeScreen() {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          className={`py-4 px-14 rounded-xl ${
+          className={` flex-1 items-center py-4 rounded-xl ${
             selectedButton === "Completed" ? "bg-white" : ""
           }`}
           onPress={() => handleButtonPress("Completed")}
         >
           <Text
-            className={`text-md ${
+            className={`text-lg ${
               selectedButton === "Completed" ? "font-bold" : ""
             }`}
             style={{ color: "#054BB4" }}
